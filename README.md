@@ -4,7 +4,7 @@ Este projeto consiste em uma calculadora interativa desenvolvida em Python que r
 ## Demonstração
 Ao executar o programa, o usuário pode selecionar uma operação, inserir dois números e visualizar o resultado no console, com validações que previnem erros como divisão por zero.
 
-![Execuções da calculadora](https://github.com/vitoriapguimaraes/portifolio-python-development/blob/main/8.%20Calculadora/calculadora-Demonstracao.gif)
+![Execuções da calculadora](https://github.com/vitoriapguimaraes/Python-Calculadora/blob/main/calculadora-Demonstracao.gif)
 
 ## Principais Tecnologias Utilizadas
 - Python: Linguagem principal do projeto.
