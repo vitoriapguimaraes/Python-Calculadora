@@ -15,12 +15,21 @@
 #####################################################################
 
 import sys
+from uteis import Cores
 
+# dica: 
+# print(f"{' Calculadora em Python ':*^40} ") 
+# faz a mesma coisa :)
+
+print(Cores.AMARELO)
 print("\n******************* Calculadora em Python *******************")
+print(f"{Cores.FIM}")
 
 ### Condições básicas de funcionamento ###
 
+print(Cores.BRANCO)
 print("\nSelecione o número da operação desejada: \n")
+print(Cores.FIM)
 print("1 - Soma")
 print("2 - Subtração")
 print("3 - Multiplicação")
@@ -53,28 +62,29 @@ num2 = float(num2)
 
 ### Cálculos das operações ###
 
-if operacao == 1:
-    resultado = num1 + num2
-    texto_operador = "+"
-    print(f"\n{num1} {texto_operador} {num2} = {resultado}")
-    
-elif operacao == 2:
-    resultado = num1 - num2
-    texto_operador = "-"
-    print(f"\n{num1} {texto_operador} {num2} = {resultado}")
-    
-elif operacao == 3:
-    resultado = num1 * num2
-    texto_operador = "*"
-    print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
-
-elif operacao ==4:
-    if num2 == 0:
-        print("\nNão é possível fazer essa operação.")
-    else:
-        resultado = num1 / num2
-        texto_operador = "/"
-        print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
+match operacao:
+    case 1:
+  	  resultado = num1 + num2
+  	  texto_operador = "+"
+  	  print(f"\n{num1} {texto_operador} {num2} = {resultado}")
+    case 2:
+    	resultado = num1 - num2
+    	texto_operador = "-"
+    	print(f"\n{num1} {texto_operador} {num2} = {resultado}")
+    case 3:
+    	resultado = num1 * num2
+    	texto_operador = "*"
+    	print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
+    case 4:
+    	try:
+     	   resultado = num1 / num2
+    	except ZeroDivisionError:
+    		print(Cores.VERMELHO)
+    		print("\nNão é possível fazer essa operação.")
+    		print(Cores.FIM)
+    	else:
+     	   texto_operador = "/"
+     	   print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
 
 print("-"*50)
 

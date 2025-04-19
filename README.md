@@ -4,7 +4,7 @@ Este projeto consiste em uma calculadora interativa desenvolvida em Python que r
 ## Demonstração
 Ao executar o programa, o usuário pode selecionar uma operação, inserir dois números e visualizar o resultado no console, com validações que previnem erros como divisão por zero.
 
-![Execuções da calculadora](https://github.com/vitoriapguimaraes/portifolio-python-development/blob/main/8.%20Calculadora/calculadora-Demonstracao.gif)
+![Execuções da calculadora](https://github.com/vitoriapguimaraes/Python-Calculadora/blob/main/calculadora-Demonstracao.gif)
 
 ## Principais Tecnologias Utilizadas
 - Python: Linguagem principal do projeto.
@@ -36,10 +36,10 @@ Ao executar o programa, o usuário pode selecionar uma operação, inserir dois 
 A calculadora oferece uma experiência confiável e eficiente, ideal para aprendizado de lógica e manipulação de dados no Python. Com validações robustas, ela reduz os riscos de erros comuns, tornando o código mais seguro.
 
 ## Próximos Passos/Melhorias
-- Implementar blocos <code>try</code> e <code>except</code> para aprimorar o tratamento de exceções.
-- Refatorar o código para modularizar as operações em funções separadas.
-- Adicionar uma interface gráfica simples usando bibliotecas como Tkinter ou PyQt.
-- Expandir a funcionalidade com operações avançadas, como exponenciação e cálculo de raízes.
+- [ ] Implementar blocos <code>try</code> e <code>except</code> para aprimorar o tratamento de exceções.
+- [ ] Refatorar o código para modularizar as operações em funções separadas.
+- [ ] Adicionar uma interface gráfica simples usando bibliotecas como Tkinter ou PyQt.
+- [ ] Expandir a funcionalidade com operações avançadas, como exponenciação e cálculo de raízes.
 
 <br>
 <hr> 
