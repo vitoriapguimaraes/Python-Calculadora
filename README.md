@@ -1,49 +1,100 @@
-# Calculadora em Python
-Este projeto consiste em uma calculadora interativa desenvolvida em Python que realiza operações matemáticas básicas: soma, subtração, multiplicação e divisão. A aplicação foi projetada com foco na validação de entradas e em garantir robustez, sendo ideal para aprendizado e prática de lógica de programação.
+# Calculadora Web com Flask
 
-## Demonstração
-Ao executar o programa, o usuário pode selecionar uma operação, inserir dois números e visualizar o resultado no console, com validações que previnem erros como divisão por zero.
+>   Este projeto oferece uma interface amigável para executar operações e visualizar resultados em tempo real.
 
-![Execuções da calculadora](https://github.com/vitoriapguimaraes/Python-Calculadora/blob/main/calculadora-Demonstracao.gif)
+Uma aplicação web interativa para realizar cálculos matemáticos básicos de forma eficiente e intuitiva.
 
-## Principais Tecnologias Utilizadas
-- Python: Linguagem principal do projeto.
-- timeit: Biblioteca utilizada para medir o tempo de execução de cálculos.
-- Estruturas condicionais: <code>if</code>, <code>elif</code>, <code>else</code>.
-- Funções de validação de entrada.
+<a href="https://vitoriapguimaraes.github.io/Python-Calculadora/"><img src="https://img.shields.io/badge/-Calculadora%20Python-000000?style=for-the-badge" alt="Python-Calculadora">
 
-## Estrutura do Projeto
-```
-└── calculadora.py  # Arquivo principal contendo toda a lógica do programa.
-```
+![Tela do sistema](https://github.com/vitoriapguimaraes/Python-Calculadora/blob/main/results/calculate.gif)
 
-## Como Executar
-1. Certifique-se de ter o Python 3.8+ instalado.
-2. Baixe o arquivo calculadora.py para o seu computador.
-3. Abra o terminal, navegue até o diretório do arquivo e execute o comando:
+## Funcionalidades Principais:
+
+-   Realiza operações de adição, subtração, multiplicação, divisão e porcentagem.
+-   Validação de entrada para garantir que apenas números válidos sejam utilizados.
+-   Tratamento de erros para evitar divisão por zero e operações inválidas.
+-   Interface dinâmica que atualiza os resultados instantaneamente.
+
+## Tecnologias Utilizadas:
+
+-   Python
+-   Flask
+-   JavaScript
+-   HTML
+-   CSS
+
+## Como Executar:
+
+1.  Clone o repositório.
+2.  Navegue até o diretório do projeto.
+3.  Crie um ambiente virtual (recomendado):
+
+    ```bash
+    python3 -m venv venv
     ```
-    python calculadora.py
+
+4.  Ative o ambiente virtual:
+
+    -   No Linux/macOS:
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+    -   No Windows:
+
+        ```bash
+        .\venv\Scripts\activate
+        ```
+
+5.  Instale o Flask:
+
+    ```bash
+    pip install flask
+    
     ```
-4. Siga as instruções exibidas no console para escolher a operação e inserir os números.
 
-## Funcionalidades
-- Operações básicas: soma, subtração, multiplicação e divisão.
-- Validação de entrada: garante que apenas números válidos sejam utilizados.
-- Tratamento de erros como divisão por zero.
-- Medição do tempo de execução de cálculos.
+6.  Execute a aplicação:
 
-## Resultados e Conclusões
-A calculadora oferece uma experiência confiável e eficiente, ideal para aprendizado de lógica e manipulação de dados no Python. Com validações robustas, ela reduz os riscos de erros comuns, tornando o código mais seguro.
+    ```bash
+    python app.py
+    ```
 
-## Próximos Passos/Melhorias
-- [ ] Implementar blocos <code>try</code> e <code>except</code> para aprimorar o tratamento de exceções.
-- [ ] Refatorar o código para modularizar as operações em funções separadas.
-- [ ] Adicionar uma interface gráfica simples usando bibliotecas como Tkinter ou PyQt.
-- [ ] Expandir a funcionalidade com operações avançadas, como exponenciação e cálculo de raízes.
+7.  Abra o navegador e acesse `http://127.0.0.1:5000/`
 
-<br>
-<hr> 
+## Como Usar:
 
-### Currículos e Documentos
-Acesse os arquivos disponíveis na pasta 
-[![Documentos](https://img.shields.io/badge/DOCUMENTOS-%F0%9F%93%83-blue?style=flat-square)](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.
+1.  Insira o primeiro número no campo correspondente.
+2.  Selecione a operação desejada (+, -, *, /, %).
+3.  Insira o segundo número.
+4.  O resultado será exibido automaticamente na tela.
+5.  Utilize os botões "C" para limpar o cálculo atual ou "AC" para limpar o histórico.
+
+## Estrutura de Diretórios:
+
+```
+/Python-Calculadora
+├── app.py                  # Arquivo principal da aplicação Flask
+├── templates/
+│   └── index.html          # Página HTML da calculadora
+├── static/
+│   ├── style.css           # Estilos CSS
+│   └── script.js           # Lógica JavaScript da calculadora
+├── venv/                   # Ambiente virtual do Python
+├── file-scripts-versions   # Primeiras versões do projeto
+├── results/                # Software print and gif
+└── README.md               # Documentação do projeto
+```
+
+## Status:
+
+✅ Concluído
+
+> Melhorias que podem ser incluídas:
+> - Implementar mais testes unitários.
+> - Adicionar histórico de cálculos.
+> - Adicionar funcionalidade de salvar cálculos em um arquivo.
+
+## Mais Sobre Mim
+
+Acesse os arquivos disponíveis na [Pasta Documentos](https://github.com/vitoriapguimaraes/vitoriapguimaraes/tree/main/DOCUMENTOS) para mais informações sobre minhas qualificações e certificações.

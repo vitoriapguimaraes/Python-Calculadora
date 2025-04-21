@@ -1,8 +1,5 @@
 # Calculadora em Python
 
-# Desenvolva uma calculadora em Python com tudo que você aprendeu nos capítulos até aqui no curso. 
-# A solução será apresentada no próximo capítulo!
-
 #####################################################################
 # Selecione o número da operação desejada:                          #
 #     1 - Soma                                                      #
@@ -15,17 +12,11 @@
 #####################################################################
 
 import sys
-from uteis import Cores
-
-# dica: 
-# print(f"{' Calculadora em Python ':*^40} ") 
-# faz a mesma coisa :)
+from scripts.colors import Cores
 
 print(Cores.AMARELO)
-print("\n******************* Calculadora em Python *******************")
+print(f"{' Calculadora em Python ':*^40} ") 
 print(f"{Cores.FIM}")
-
-### Condições básicas de funcionamento ###
 
 print(Cores.BRANCO)
 print("\nSelecione o número da operação desejada: \n")
@@ -34,6 +25,7 @@ print("1 - Soma")
 print("2 - Subtração")
 print("3 - Multiplicação")
 print("4 - Divisão")
+
 operacao = input("\nDigite sua opção (1/2/3/4): ")
 
 op_possiveis = ["1", "2", "3", "4"]
@@ -41,8 +33,7 @@ op_possiveis = ["1", "2", "3", "4"]
 if operacao not in op_possiveis:
     print("\nO campo não foi preenchido corretamente.")
     sys.exit()  # Para a execução do programa
-operacao = float(operacao)
-
+operacao = int(operacao)
 
 def verificar_numero(entrada):
     try:
@@ -58,38 +49,32 @@ num1 = float(num1)
 num2 = input("\nDigite o segundo número: ")
 verificar_numero(num2)
 num2 = float(num2)
-
-
-### Cálculos das operações ###
-
+		
 match operacao:
     case 1:
-  	  resultado = num1 + num2
-  	  texto_operador = "+"
-  	  print(f"\n{num1} {texto_operador} {num2} = {resultado}")
+        resultado = num1 + num2
+        texto_operador = "+"
+        print(f"\n{num1} {texto_operador} {num2} = {resultado}")
     case 2:
-    	resultado = num1 - num2
-    	texto_operador = "-"
-    	print(f"\n{num1} {texto_operador} {num2} = {resultado}")
+        resultado = num1 - num2
+        texto_operador = "-"
+        print(f"\n{num1} {texto_operador} {num2} = {resultado}")
     case 3:
-    	resultado = num1 * num2
-    	texto_operador = "*"
-    	print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
+        resultado = num1 * num2
+        texto_operador = "*"
+        print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
     case 4:
-    	try:
-     	   resultado = num1 / num2
-    	except ZeroDivisionError:
-    		print(Cores.VERMELHO)
-    		print("\nNão é possível fazer essa operação.")
-    		print(Cores.FIM)
-    	else:
-     	   texto_operador = "/"
-     	   print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
+        try:
+            resultado = num1 / num2
+        except ZeroDivisionError:
+            print(Cores.VERMELHO)
+            print("\nNão é possível fazer essa operação.")
+            print(Cores.FIM)
+        else:
+            texto_operador = "/"
+            print(f"\n{num1} {texto_operador} {num2} = {resultado:.3f}")
 
 print("-"*50)
-
-
-### Tempo de execução ###
 
 import timeit
 tempo_execucao = timeit.timeit('sum(range(1000))', number=10000)
