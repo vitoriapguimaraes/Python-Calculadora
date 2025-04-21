@@ -4,7 +4,7 @@
 
 Uma aplicação web interativa para realizar cálculos matemáticos básicos de forma eficiente e intuitiva.
 
-<a href="https://vitoriapguimaraes.github.io/Python-Calculadora/"><img src="https://img.shields.io/badge/-Calculadora%20Python-000000?style=for-the-badge" alt="Python-Calculadora">
+<a href="https://python-calculadora.onrender.com/"><img src="https://img.shields.io/badge/-Calculadora%20Python-000000?style=for-the-badge" alt="Python-Calculadora">
 
 ![Tela do sistema](https://github.com/vitoriapguimaraes/Python-Calculadora/blob/main/results/calculate.gif)
 
@@ -47,11 +47,10 @@ Uma aplicação web interativa para realizar cálculos matemáticos básicos de 
         .\venv\Scripts\activate
         ```
 
-5.  Instale o Flask:
+5.  Instale  as dependências:
 
     ```bash
-    pip install flask
-    
+    pip install -r requirements.txt
     ```
 
 6.  Execute a aplicação:
