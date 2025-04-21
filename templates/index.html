@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <main class="calculator">
+
+        <header class="calculator__header">
+            <h1 class="calculator__title">Python Calculator</h1>
+            <p class="calculator__subtitle">Simple. Fast. Made in Python.</p>
+        </header>
+
+        <section class="calculator__body">
+
+            <div class="calculator__screen-container">
+                <div class="calculator__screen">
+                    <p id="first-number"></p>
+                    <p id="result"></p>
+                </div>
+            </div>
+
+            <div class="calculator__buttons">
+                <button class="button button--operation" id="clear-history">CE</button>
+                <button class="button button--operation" id="clear">C</button>
+                <button class="button button--operation" id="percentage">%</button>
+                <button class="button button--operation" id="divide">÷</button>
+
+                <button class="button button--number" id="7">7</button>
+                <button class="button button--number" id="8">8</button>
+                <button class="button button--number" id="9">9</button>
+                <button class="button button--operation" id="multiply">x</button>
+
+                <button class="button button--number" id="4">4</button>
+                <button class="button button--number" id="5">5</button>
+                <button class="button button--number" id="6">6</button>
+                <button class="button button--operation" id="subtract">-</button>
+
+                <button class="button button--number" id="1">1</button>
+                <button class="button button--number" id="2">2</button>
+                <button class="button button--number" id="3">3</button>
+                <button class="button button--operation" id="add">+</button>
+
+                <button class="button button--number" id="00">00</button>
+                <button class="button button--number" id="0">0</button>
+                <button class="button button--number" id="dot">,</button>
+                <button class="button button--equals" id="equals">=</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
