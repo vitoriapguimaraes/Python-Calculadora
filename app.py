@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
-
+    
 @app.route("/calculate", methods=['POST'])
 def calculate():
     data = request.get_json()
@@ -31,10 +31,10 @@ def calculate():
         if number2 == 0:
             return jsonify({'error': 'Division by zero is not allowed'}), 400
         result = f"{number1 * 100 / number2}%"
-    else:
+    else: 
         return jsonify({'error': 'Invalid operation'}), 400
 
-    return jsonify({'result': round(result, 3)})
-
+    return jsonify({'result': round(result, 3), 'n1': number1, 'n2': number2, 'op': operation})
+    
 if __name__ == "__main__":
     app.run(debug=True)

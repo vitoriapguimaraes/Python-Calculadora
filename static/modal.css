@@ -1,0 +1,155 @@
+.md-background{
+    position: fixed;
+    background-color: black;
+    opacity: 0.6;
+    transition: opacity: 0.5s, display 0.5s;
+    display: none;
+    z-index: 3;
+    min-height: 100vh;
+    width: 100%;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn .5s;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    border-radius: 1rem;
+    width: 23rem;
+    height: 40rem;
+    //overflow: scroll;
+    z-index: 4;
+    background-color: silver;
+}
+
+.mdcc{
+    // background-color: blue;
+    height: 27rem;
+    padding-right: 20px;
+    overflow-y: scroll;
+    // scroll-margin: 20px;
+}
+
+.mdcc::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.mdcc::-webkit-scrollbar-track {
+  background: #cccac8; 
+}
+ 
+/* Handle */
+.mdcc::-webkit-scrollbar-thumb {
+  background: #888; 
+  
+   // border-left: 7px solid black;
+  margin: 10px;
+}
+
+/* Handle on hover */
+.mdcc::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.modal-content{
+    display: grid;
+    font-weight: bold;
+    grid-template-columns: auto 60px;
+    grid-template-areas: 'myArea3 myArea' 'myArea2 myArea';
+    gap: 0px;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 10px 0px;
+    border-radius: 1rem;
+    background-color: grey;
+}
+
+.md-operation{
+    border-radius: 0.5rem 0rem 0rem 0rem;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    grid-area: myArea3;
+    margin-bottom: 0rem;
+    background-color: #b3b3ab;
+}
+
+.md-result{
+    border-radius: 0rem 0rem 0rem 0.5rem;
+    grid-area: myArea2;
+    margin-top:0rem;
+    background-color: #323633;
+    padding: 0.15rem;
+    padding-left: 1rem;
+    color: white;
+}
+
+.md-exclude{
+    display: flex;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    margin-top:1.5rem;
+    margin-bottom: 1.5rem;
+    grid-area: myArea;
+    // margin:1.5rem 0px 1px 0rem;
+    padding:1.8cqw 0cqw 0cqw 1.8cqw;
+    align-items: center; // does vertically center the desired content
+  justify-content: center; // horizontally centers single line items
+    text-align: center;
+    font-size: 2rem;
+    background-color: #d44a4a;
+    color: #571414;
+}
+
+.noshow{
+    opacity:0;
+}
+
+.backshow{
+    display: block;
+    // opacity: 0.6;
+}
+
+@webkit-keyframes fadeIn {
+    from { opacity: 0; }
+         to { opacity: 0.6;}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+         to { opacity: 0.6;}
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.3s;
+  animation: animatezoom 0.3s;
+}
+
+.zoomout {
+    -webkit-animation: zoomout 0.3s;
+    animation: zoomout 0.3s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0); display: 0.3s;}
+  to {-webkit-transform: scale(1); display: 0.3s;}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0); display: 0.3s;}
+  to {transform: scale(1); display: 0.3s;}
+}
+
+@-webkit-keyframes zoomout {
+  from {-webkit-transform: scale(1.5); display: 0.3s;}
+  to {-webkit-transform: scale(1); display: 0.3s;}
+}
+
+@keyframes zoomout {
+  from {transform: scale(1.5); display: 0.3s;}
+  to {transform: scale(1); display: 0.3s;}
+}
