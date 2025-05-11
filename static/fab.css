@@ -1,0 +1,141 @@
+.fab-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  //width: 10px;
+}
+
+.fab {
+  border-radius: 50%;
+  //background-color: #6200ea;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/*.fab:hover {
+  background-color: #3700b3;
+}*/
+
+.fab-options {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 11rem;
+  margin-right: 3.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);  transition-behavior: allow-discrete;
+  transition: opacity 0.3s, transform 0.3s, display 0.3s;
+  
+    -webkit-animation: trans 1s;
+    animation: trans .5s;
+  display: none;
+}
+
+.fab-options.show {
+   display: flex;
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.button--fab {
+    position: fixed;
+    background-color: #43a08c;
+    width: 9rem;
+    height: 9rem;
+    font-size: 5rem;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.button--fab:hover {
+    background-color: #4caf9d
+}
+
+.option {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 5.5rem;
+  height: 5.5rem;
+  font-size: 3rem;
+  background-color: #03dac5;
+}
+.option:hover {
+  background-color: #018786;
+}
+
+button:hover + .tooltip{
+  background-color: red;
+}
+.tooltipi{
+z-index: -1;
+//height: 3rem;
+//width: 0rem;
+background-color: blue;
+// padding: 3rem;
+transition: width 0.3s;
+}
+#emptyhistory {
+    margin-top: 10rem;
+    font-size: 2rem;
+}
+
+.tooltip{
+display: flex;
+position: absolute;
+z-index: -1;
+height: 5rem;
+width: 0rem;
+font-size: 2rem;
+color: transparent;
+right: 6rem;
+background-color: blue;
+// padding: 3rem;
+transition: width 0.3s;
+}
+.button-row{
+display: flex;
+justify-content: center;
+}
+
+div div.export{
+    background-color: black;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    //flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 30px;
+    width: 70%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.flec{
+    display: block;
+}
+div.export:has(div.export){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    // justify-content: center;
+    // align-items: center;
+    background-color: transparent;
+}
+
+.hover{ background-color: #0ad174; z-index: 4; width: 8rem; align-items: center; justify-content: center; color: green; }
+
+@webkit-keyframes trans {
+    from { transform: translateY(20px); }
+         to { transform: translateY(0); }
+}
+
+@keyframes trans {
+    from { transform: translateY(20px); }
+         to { transform: translateY(0);}
+}

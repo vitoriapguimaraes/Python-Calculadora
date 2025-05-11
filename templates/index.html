@@ -4,12 +4,50 @@
     <meta charset="UTF-8">
     <title>Python Calculator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fab.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='modal.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='export.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='modal.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+,
 </head>
 <body>
-
+    
+    <div class="md-background">
+        -
+        </div>
+        <div class="modal animate">
+            <p>History</p>
+            <div class="mdcc">
+            
+            <div id="app">
+            <p id="emptyhistory">Still no operations yet</p>
+            </div>
+            
+            </div>
+        </div>
+        
+        <div class="modal zoomout" style="width: 26rem;">
+            <p>Export</p>
+            <div>
+            
+            <div class="export">
+                <div class="export" onclick="exportData('export')" style="background-color: #2f3030;"><div class="flec"><i class="fa-solid fa-laptop-code"></i></div><div class="flec">JSON</div></div>
+                <div class="export" onclick="generateCSV('export')" style="background-color: #03572e;"><i class="fa-solid fa-file-csv"></i>CSV</div>
+                <div class="export" onclick="generateXML('export')" style="background-color: #b8b51a;"><i class="fa-solid fa-code"></i>XML</div>
+                <div class="export" onclick="generatePDF('export.pdf')" style="background-color: red;"><i class="fa-solid fa-file-pdf"></i>PDF</div>
+            </div>
+            
+            </div>
+        </div>
+        
     <main class="calculator">
-
+        
         <header class="calculator__header">
             <h1 class="calculator__title">Python Calculator</h1>
             <p class="calculator__subtitle">Simple. Fast. Made in Python.</p>
@@ -51,6 +89,25 @@
                 <button class="button button--equals" id="equals">=</button>
             </div>
         </section>
+        
+        <div class="fab-container">
+          <button class="button--fab fab main-fab" id="fab">+</button>
+          <div class="fab-options">
+          <div class="button-row">
+            <span class="tooltip">Tooltip</span>
+            <button class="fab option" onclick="exportData('batatas')"><i class="fa-solid fa-circle-question"></i></button>
+            </div>
+            <div class="button-row">
+            <span class="tooltip">Export</span>
+            <button class="fab option" onclick="modalExport()"><i class="fa-solid fa-file-arrow-down"></i></button>
+            </div>
+            <div class="button-row">
+            <span class="tooltip">History</span>
+            <button class="fab option" onclick="modalHistory()"><i class="fa-solid fa-clock-rotate-left"></i></button>
+            </div>
+          </div>
+        </div>
+         
     </main>
 </body>
 </html>

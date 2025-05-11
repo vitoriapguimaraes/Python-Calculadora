@@ -67,6 +67,14 @@ function calculate() {
         if (data.result !== undefined) {
             resultDisplay.textContent = data.result;
             currentInput = data.result.toString();
+            let op = data.n1+data.op+data.n2;
+            let rowData = createHistoryRow(op, currentInput);
+            document.getElementById('app').appendChild(rowData);
+            document.getElementById('emptyhistory').style.display = "none";
+            historyData.push({
+                operation: ""+op,
+                result: ""+data.result
+            });
             resultDisplayed = true;
         } else {
             resultDisplay.textContent = data.error;
